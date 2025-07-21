@@ -1,0 +1,6 @@
+import pandas as pd
+df=pd.read_csv('/auto-mpg.csv')
+matched =df['cylinders']==8
+new_df=df[matched]
+a=df.groupby(['model year']).count()
+print(a)
